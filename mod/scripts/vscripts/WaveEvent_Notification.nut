@@ -1,4 +1,5 @@
-global function WaveNotification_Init
+global function WaveEventNotification_Init
+// global function CreateCarePackage
 const int ANNOUNCEMENT_STYLE_BIG = 0
 const int ANNOUNCEMENT_STYLE_QUICK = 1
 const int ANNOUNCEMENT_STYLE_PLAYER_LEVEL = 2
@@ -11,7 +12,7 @@ const int ANNOUNCEMENT_STYLE_OBJECTIVE = 7
 // WAVE_STATE_COMPLETE 回合完成
 // WAVE_STATE_IN_PROGRESS 回合开始
 
-void function WaveNotification_Init()
+void function WaveEventNotification_Init()
 {
     //eGameState.Playing（即游戏开始时）调用下面的StartWaveStateLoop函数
     AddCallback_GameStateEnter(eGameState.Playing, StartWaveStateLoop)
@@ -144,3 +145,7 @@ void function StartWaveStateLoop_Threaded()
     }
 }
 
+// void function CreateCarePackage()
+// {
+
+// }

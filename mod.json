@@ -1,16 +1,16 @@
 {
-	"Name": "Wave Notifcation",
-	"Description": "Wave Notifcation",
+	"Name": "WaveEvent Notifcation",
+	"Description": "WaveEvent Notifcation",
 	"LoadPriority": 1,
 	"RequiredOnClient": false,
 	"Version": "1.0.0",
 
 	"Scripts": [
 		{
-			"Path": "Wave_Notification.nut",			
-			"RunOn": "SERVER && MP",						
+			"Path": "WaveEvent_Notification.nut",
+			"RunOn": "SERVER && MP",
 			"ServerCallback": {
-				"After": "WaveNotification_Init"			
+				"After": "WaveEventNotification_Init"
 			}
 		}
 	]
