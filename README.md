@@ -1,2 +1,2 @@
-# FD.WaveNotification
- FD.WaveNotification and WaveCommand
+# FD.WaveEventNotification
+ FD.WaveEventNotification
