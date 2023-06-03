@@ -55,9 +55,8 @@ void function StartWaveStateLoop_Threaded()
                 switch (waveCount) { //根据波次输出信息 0-5
                     case 0:
                         print("")
-                        SendMessageToAllPlayers_AnnouncementMessage("偵測到重力異常","test",<1,1,0>, 1, 5)
                         // SendMessageToAllPlayers_PopUpMessage("test", 2)
-                        ServerCommand( "sv_gravity 375" )
+                        // ServerCommand( "sv_gravity 375" )
                         break;
                     case 1:
                         print("")
@@ -67,7 +66,7 @@ void function StartWaveStateLoop_Threaded()
                         break;
                     case 3:
                         print("")
-                        SendMessageToAllPlayers_AnnouncementMessage("偵測到高價值目標","擊毀一架高價值目標可獲得$200",<1,1,0>, 1, 5)
+                        SendMessageToAllPlayers_AnnouncementMessage("偵測到敵方無人機集群","擊毀無人機可獲得更多核心值",<1,1,0>, 1, 5)
                         break;
                     case 4:
                         print("")
