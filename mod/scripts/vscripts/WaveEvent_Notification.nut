@@ -1,5 +1,4 @@
 global function WaveEventNotification_Init
-// global function CreateCarePackage
 const int ANNOUNCEMENT_STYLE_BIG = 0
 const int ANNOUNCEMENT_STYLE_QUICK = 1
 const int ANNOUNCEMENT_STYLE_PLAYER_LEVEL = 2
@@ -143,8 +142,3 @@ void function StartWaveStateLoop_Threaded()
         WaitFrame() //等待1tick直到下一个tick开始
     }
 }
-
-// void function CreateCarePackage()
-// {
-
-// }
