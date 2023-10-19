@@ -1,4 +1,7 @@
 global function WaveEventNotification_Init
+global function SendMessageToAllPlayers_AnnouncementMessage
+global function SendMessageToAllPlayers_PopUpMessage
+
 const int ANNOUNCEMENT_STYLE_BIG = 0
 const int ANNOUNCEMENT_STYLE_QUICK = 1
 const int ANNOUNCEMENT_STYLE_PLAYER_LEVEL = 2
