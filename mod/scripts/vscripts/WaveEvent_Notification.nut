@@ -90,21 +90,27 @@ void function StartWaveStateLoop_Threaded()
                 switch (waveCount) { //根据波次输出信息 0-5
                     case 0:
                         print("第一波次完成")
+                        GameStatus_Checker()
                         break;
                     case 1:
                         print("第二波次完成")
+                        GameStatus_Checker()
                         break;
                     case 2:
                         print("第三波次完成")
+                        GameStatus_Checker()
                         break;
                     case 3:
                         print("第四波次完成")
+                        GameStatus_Checker()
                         break;
                     case 4:
                         print("第五波次完成")
+                        GameStatus_Checker()
                         break;
                     case 5:
                         print("第六波次完成")
+                        GameStatus_Checker()
                         break;
                 }
             }
@@ -143,5 +149,19 @@ void function StartWaveStateLoop_Threaded()
         lastWaveState = GetGlobalNetInt("FD_waveState") //更新tick
 
         WaitFrame() //等待1tick直到下一个tick开始
+    }
+}
+
+void function GameStatus_Checker()
+{
+    if( !IsValid( fd_harvester.harvester ) || !IsHarvesterAlive( fd_harvester.harvester ) )
+        return
+    print( "当前采集机血量为：" + fd_harvester.harvester.GetHealth() )
+    foreach ( entity player in GetPlayerArray() )
+    {
+        if( !IsValid( player ) || GetPlayerArray().len() == 0 )
+            return
+        print( "当前回合在线玩家数：" + GetPlayerArray().len() )
+        print( "在线玩家：" + player.GetPlayerName() + " " + player.GetUID() )
     }
 }
