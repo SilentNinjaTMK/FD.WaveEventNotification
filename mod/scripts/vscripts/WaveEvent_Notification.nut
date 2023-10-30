@@ -68,7 +68,7 @@ void function StartWaveStateLoop_Threaded()
                         break;
                     case 3:
                         print("")
-                        SendMessageToAllPlayers_AnnouncementMessage("偵測到敵方無人機集群","擊毀無人機可獲得更多核心值",<1,1,0>, 1, 5)
+                        SendMessageToAllPlayers_AnnouncementMessage("偵測到敵方無人機集群","擊毀無人機可獲得更多核心值",<1,1,0>, 10, 5)
                         break;
                     case 4:
                         print("")
